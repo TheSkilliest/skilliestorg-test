@@ -178,9 +178,9 @@ section { padding: var(--section-padding); }
     display: grid;
     gap: 1.5rem;
 }
-.featured-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.bootcamp-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-.full-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.featured-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.bootcamp-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.full-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 
 .success-card {
     /* Significantly lighter background to stand out against the #0a0a0a body */
@@ -218,7 +218,7 @@ section { padding: var(--section-padding); }
 .card-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3; /* Enforce uniform thumbnail sizes */
+    aspect-ratio: 1 / 1.414; /* Enforce uniform thumbnail sizes */
     overflow: hidden;
     background: #000;
     flex-grow: 1;
@@ -227,6 +227,7 @@ section { padding: var(--section-padding); }
     width: 100%;
     height: 100%;
     object-fit: cover; /* crop for thumbnail */
+    object-position: top center !important; /* Ensure the top of the image (university logo/header) is always visible */
     transition: transform 0.5s ease;
 }
 .success-card:hover .card-img-wrapper img {
